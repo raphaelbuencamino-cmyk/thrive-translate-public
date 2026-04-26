@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thrive Translate — Public Docs</title>
+  <style>
+    :root {
+      --navy: #0F2D4A;
+      --coral: #FF7276;
+      --bg: #F4F6FA;
+      --muted: #5b6b80;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 64px 24px 96px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 22%;
+      box-shadow: 0 12px 28px rgba(255, 114, 118, 0.35);
+      margin-bottom: 24px;
+      display: block;
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0 0 40px;
+    }
+    .links {
+      display: grid;
+      gap: 12px;
+    }
+    a.card {
+      display: block;
+      padding: 18px 22px;
+      background: white;
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--navy);
+      box-shadow: 0 4px 14px rgba(15, 45, 74, 0.06);
+      border: 1px solid rgba(15, 45, 74, 0.06);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    a.card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(15, 45, 74, 0.1);
+    }
+    a.card .title {
+      font-weight: 800;
+      font-size: 16px;
+      margin: 0 0 4px;
+    }
+    a.card .sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+    footer {
+      margin-top: 56px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="icon" viewBox="0 0 1024 1024" aria-hidden="true">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFAA4D"/>
+          <stop offset="100%" stop-color="#FF7276"/>
+        </linearGradient>
+      </defs>
+      <rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+      <circle cx="860" cy="180" r="160" fill="#FFFFFF" opacity=".18"/>
+      <circle cx="160" cy="860" r="120" fill="#005587" opacity=".18"/>
+      <g transform="translate(100 100)">
+        <path d="M0 112 Q0 0 112 0 H472 Q584 0 584 112 V392 Q584 504 472 504 H240 L144 608 V504 H112 Q0 504 0 392 Z" fill="#FFFFFF"/>
+        <text x="292" y="360" text-anchor="middle" font-family="Helvetica Neue,sans-serif" font-weight="900" font-size="340" fill="#005587">A</text>
+      </g>
+      <g transform="translate(360 380)">
+        <path d="M0 112 Q0 0 112 0 H472 Q584 0 584 112 V392 Q584 504 472 504 H360 L264 608 V504 H112 Q0 504 0 392 Z" fill="#005587"/>
+        <text x="292" y="372" text-anchor="middle" font-family="PingFang SC,Heiti SC,sans-serif" font-weight="900" font-size="340" fill="#FFFFFF">文</text>
+      </g>
+    </svg>
+
+    <h1>Thrive Translate</h1>
+    <p class="lead">Real-time clinical voice translation for pediatric care. Public-facing legal documents below.</p>
+
+    <div class="links">
+      <a class="card" href="PRIVACY.html">
+        <p class="title">Privacy Policy</p>
+        <p class="sub">PIPEDA / PHIPA aligned · how the app handles audio, transcripts, and consent</p>
+      </a>
+      <a class="card" href="TERMS.html">
+        <p class="title">Terms of Service</p>
+        <p class="sub">Provider-facing terms · scope, AI provider sub-terms, Ontario governing law</p>
+      </a>
+    </div>
+
+    <footer>
+      ThriveClinic Translate · v1 · For App Store Connect submission
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,7 @@
+title: Thrive Translate
+description: Public-facing documents for Thrive Translate
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins: []
