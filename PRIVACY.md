@@ -6,7 +6,7 @@ permalink: /PRIVACY.html
 
 # Privacy Policy — ThriveClinic Translate
 
-**Last updated:** 2026-04-25
+**Last updated:** 2026-05-03
 **Effective:** Upon TestFlight installation
 
 ThriveClinic Translate ("the app") is a clinical communication tool for pediatric clinic providers in Toronto, Ontario. This policy explains what the app collects, how that data is handled, and the controls available to the family using it during a visit.
@@ -24,7 +24,7 @@ The app is operated by the pediatric clinic that distributes it to its providers
 **Does:**
 - Captures audio from the iPhone microphone only during an active provider-initiated translation session.
 - Sends audio to a private translation service operated by the clinic, which uses OpenAI Whisper (speech recognition), Anthropic Claude (translation), and OpenAI / Microsoft Azure (text-to-speech) to produce the translated output.
-- Stores the transcript of the current visit on the iPhone's local storage (Core Data) for the duration of the visit.
+- Holds the transcript of the current visit in iPhone memory during the visit only.
 
 **Does not:**
 - Record the family's conversation outside of an active session.
@@ -36,9 +36,9 @@ The app is operated by the pediatric clinic that distributes it to its providers
 
 | Data | Where it lives | How long | Purpose |
 |---|---|---|---|
-| Family consent timestamp | Local on device | 12 hours | PIPEDA / PHIPA audit record that the family agreed before the session |
+| Family consent timestamp | RAM during the session | Exists only while the visit is active | PIPEDA / PHIPA consent established by family tap on the privacy-notice screen |
 | Audio of the visit (in-flight only) | RAM during the call to the translation service | Discarded after upload | Speech-to-text input |
-| Visit transcript (text) | Local on device, Core Data | **Auto-deleted 12 hours after session ends** | Provider can re-read what was said in this visit |
+| Visit transcript (text) | RAM during the session | **Discarded immediately when session ends or app closes** | Allows provider and family to read translations as they appear during the visit |
 | Selected patient language | Local on device | Until the provider changes it | Restores the clinic's last patient on next launch |
 | Provider profile (name, title, clinic, photo placeholder) | Local on device | Until the provider clears it | Displays in the provider profile screen |
 | Provider speech cadence (statistical pause + utterance length) | Local on device | Until the provider taps "Reset my learned cadence" | Tunes voice activity detection to the provider's natural pauses |
@@ -83,16 +83,16 @@ Every session begins with a screen that displays — in English and the family's
 
 ## 10. Children's information
 
-This is a pediatric clinic app. Children rarely interact with the iPhone directly; their parent or guardian taps the consent screen. Any incidental child information spoken aloud during the visit is treated under the same on-device-only, 12-hour-auto-delete model as adult speech. The app does not knowingly collect any child information beyond what is spoken aloud during a clinically-relevant interpreter exchange.
+This is a pediatric clinic app. Children rarely interact with the iPhone directly; their parent or guardian taps the consent screen. Any incidental child information spoken aloud during the visit is treated under the same RAM-only, discarded-at-session-end model as adult speech. The app does not knowingly collect any child information beyond what is spoken aloud during a clinically-relevant interpreter exchange.
 
 ## 11. Family rights under PIPEDA / PHIPA
 
 A family member can:
 - Ask the provider to end and clear the session before submitting consent.
-- Withdraw consent during a session, at which point the provider taps "End Session" and the transcript is auto-deleted within 12 hours.
-- Contact the clinic directly to request a copy of any consent timestamp record relating to their visit, or to request its deletion ahead of the 12-hour window.
+- Withdraw consent during a session, at which point the provider taps "End Session" and the transcript is discarded immediately.
+- Contact the clinic to discuss any concerns about a visit. The transcript itself is not retained — there is no clinic-side or on-device database to retrieve from after the session ends.
 
-There is no clinic-side database of session transcripts, so a request for the transcript itself is not technically fulfillable beyond the 12-hour on-device window.
+There is no clinic-side database of session transcripts, and no on-device persistence either. The transcript exists only during the active visit; once the session ends, the conversation is no longer recoverable.
 
 ## 12. Changes to this policy
 
