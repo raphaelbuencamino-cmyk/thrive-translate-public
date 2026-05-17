@@ -6,7 +6,7 @@ permalink: /TERMS.html
 
 # Terms of Service — ThriveClinic Translate
 
-**Last updated:** 2026-04-25
+**Last updated:** 2026-05-17
 **Effective:** Upon TestFlight installation
 
 ThriveClinic Translate ("the app") is provided by the pediatric clinic that distributes it ("the clinic"). By installing or using the app, you agree to these terms. If you do not agree, do not install the app.
@@ -28,18 +28,18 @@ The app is **not**:
 - A medical device, diagnostic tool, or clinical decision-support system. It does not interpret medical findings, suggest diagnoses, or replace the provider's clinical judgment.
 - A guarantee of translation accuracy. Machine translation can fail in clinically meaningful ways. The provider remains responsible for confirming that the family understood and that the family's response was understood.
 
-## 3. Tigrinya translation — explicit limitation
+## 3. Tigrinya and Urdu translation — explicit limitation
 
-Tigrinya is the only language for which the app surfaces a "human review recommended" warning on every translation. Commercial machine translation of Tigrinya is unreliable across all providers as of this version. The provider is reminded that any clinically meaningful Tigrinya exchange should be confirmed via a second method (a known Tigrinya speaker, a follow-up phone interpreter, or written instructions in English handed to a literate family member) before action is taken on the translation.
+Tigrinya and Urdu are the languages for which the app surfaces a "human review recommended" warning on every translation. Commercial machine translation of these languages is unreliable across all providers as of this version. The provider is reminded that any clinically meaningful exchange in these languages should be confirmed via a second method (a known speaker of the language, a follow-up phone interpreter, or written instructions in English handed to a literate family member) before action is taken on the translation.
 
 ## 4. Provider responsibilities
 
 The provider agrees to:
 - Initiate each session only after explaining the consent screen to the family in a way the family can understand.
-- End the session at the family's request and not retain the transcript past the 12-hour automatic deletion window.
+- End the session at the family's request — the transcript is discarded immediately on End Session per the privacy policy.
 - Use the AI Troubleshoot drawer only between utterances, not while the family is speaking — drawer-open auto-pauses the microphone for this reason.
 - Use the "Save for everyone" feature for **linguistic patterns only**. Submissions containing patient details (names, dates, dosages) violate these terms and may be rejected by the admin reviewer.
-- Not record, screenshot, or otherwise persist the session transcript outside the app's 12-hour window.
+- Not record, screenshot, or otherwise persist the session transcript outside the active session — the transcript exists only in iPhone memory during the visit and is unrecoverable after End Session, per the privacy policy.
 - Not attempt to bypass the family consent screen.
 - Report a lost or stolen iPhone to the clinic immediately so access can be revoked.
 
@@ -67,6 +67,7 @@ The app's translation service relies on:
 - **OpenAI** under the OpenAI API Terms of Service.
 - **Anthropic** under the Anthropic Commercial Terms of Service.
 - **Microsoft Azure** under the Azure Cognitive Services Terms.
+- **Modal** under Modal's Service Terms (used for Tigrinya speech recognition only).
 
 Use of the app implies acceptance of those providers' terms with respect to the audio and text the app transmits.
 

@@ -6,7 +6,7 @@ permalink: /PRIVACY.html
 
 # Privacy Policy — ThriveClinic Translate
 
-**Last updated:** 2026-05-03
+**Last updated:** 2026-05-17
 **Effective:** Upon TestFlight installation
 
 ThriveClinic Translate ("the app") is a clinical communication tool for pediatric clinic providers in Toronto, Ontario. This policy explains what the app collects, how that data is handled, and the controls available to the family using it during a visit.
@@ -23,7 +23,7 @@ The app is operated by the pediatric clinic that distributes it to its providers
 
 **Does:**
 - Captures audio from the iPhone microphone only during an active provider-initiated translation session.
-- Sends audio to a private translation service operated by the clinic, which uses OpenAI Whisper (speech recognition), Anthropic Claude (translation), and OpenAI / Microsoft Azure (text-to-speech) to produce the translated output.
+- Sends audio to a private translation service operated by the clinic, which uses OpenAI Whisper (speech recognition, most languages) or Modal-hosted Ethio-ASR-tigrinya (speech recognition, Tigrinya only), Anthropic Claude (translation), and OpenAI / Microsoft Azure (text-to-speech) to produce the translated output.
 - Holds the transcript of the current visit in iPhone memory during the visit only.
 
 **Does not:**
@@ -42,7 +42,7 @@ The app is operated by the pediatric clinic that distributes it to its providers
 | Selected patient language | Local on device | Until the provider changes it | Restores the clinic's last patient on next launch |
 | Provider profile (name, title, clinic, photo placeholder) | Local on device | Until the provider clears it | Displays in the provider profile screen |
 | Provider speech cadence (statistical pause + utterance length) | Local on device | Until the provider taps "Reset my learned cadence" | Tunes voice activity detection to the provider's natural pauses |
-| Tigrinya correction submissions | Sent to the clinic's translation service | Until admin removes from the shared rule set | Improves Tigrinya translation for every clinician — submissions are reviewed by a clinic admin and may not contain digits, names, or patient details |
+| Learning-loop correction submissions (Tigrinya and Urdu) | Sent to the clinic's translation service | Until admin removes from the shared rule set | Improves Tigrinya and Urdu translation for every clinician — submissions are reviewed by a clinic admin and may not contain digits, names, or patient details |
 
 ## 4. Data the app does NOT collect
 
@@ -56,15 +56,16 @@ The app is operated by the pediatric clinic that distributes it to its providers
 
 A single clinical session may briefly send the following to third-party AI providers, only for the immediate purpose of producing a translation:
 
-- **OpenAI** — receives the audio chunk for speech recognition (Whisper) and a text snippet for text-to-speech synthesis. OpenAI's API terms state that audio and text submitted via the API are not used to train OpenAI models.
+- **OpenAI** — receives the audio chunk for speech recognition (Whisper, most languages) and a text snippet for text-to-speech synthesis. OpenAI's API terms state that audio and text submitted via the API are not used to train OpenAI models.
 - **Anthropic** — receives the recognized text for translation by Claude. Anthropic's API terms state that API submissions are not used to train Claude models.
 - **Microsoft Azure** — receives the translated text for text-to-speech synthesis using Azure Neural voices.
+- **Modal** — receives the audio chunk for Tigrinya-language speech recognition only. Modal hosts the open-source Ethio-ASR-tigrinya model because no commercial cloud speech-recognition provider supports Tigrinya at clinical quality as of this version.
 
 Each request flows through the clinic's private translation service hosted on Netlify. The clinic's service holds the API credentials; the iPhone does not contain any third-party API keys.
 
-## 6. The Tigrinya learning loop (PRD §5.9)
+## 6. The learning loop (Tigrinya and Urdu, PRD §5.9)
 
-The app includes an optional "Save for everyone" feature visible only when the patient language is Tigrinya. When a provider taps it, three short pieces of text — an English phrase, a Tigrinya phrase, and a rationale — are submitted to a shared learning queue maintained by the clinic admin. **The submission UI rejects any text containing digits or PHI markers.** Submissions are reviewed by a clinic admin before they affect future translations. Submissions identify the contributing provider by name (drawn from the provider profile on the device) and an IP address; they do not include any patient data.
+The app includes an optional "Save for everyone" feature visible when the patient language is Tigrinya or Urdu. When a provider taps it, three short pieces of text — an English phrase, a target-language phrase, and a rationale — are submitted to a shared learning queue maintained by the clinic admin. **The submission UI rejects any text containing digits or PHI markers.** Submissions are reviewed by a clinic admin before they affect future translations. Submissions identify the contributing provider by name (drawn from the provider profile on the device) and an IP address; they do not include any patient data. The two languages have independent rule sets (a Tigrinya correction does not affect Urdu translations and vice versa).
 
 ## 7. The discharge SMS (when used)
 
